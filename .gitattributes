@@ -1,0 +1,17 @@
+# Archivos que se ejecutan dentro de contenedores Linux: siempre con fin de línea LF
+# (con CRLF, entrypoint.sh falla al iniciar el contenedor en Windows).
+* text=auto
+*.sh            text eol=lf
+Dockerfile      text eol=lf
+.dockerignore   text eol=lf
+*.yml           text eol=lf
+*.sql           text eol=lf
+*.py            text eol=lf
+.env.example    text eol=lf
+requirements.txt text eol=lf
+
+# Binarios
+*.png  binary
+*.jpg  binary
+*.pdf  binary
+*.docx binary

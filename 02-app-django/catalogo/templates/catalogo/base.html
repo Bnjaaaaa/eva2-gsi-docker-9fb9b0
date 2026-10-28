@@ -1,0 +1,22 @@
+{% load static %}<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Catálogo{% endblock %} · Ferretería</title>
+  <link rel="stylesheet" href="{% static 'catalogo/estilos.css' %}">
+</head>
+<body>
+  <header class="barra">
+    <a class="marca" href="{% url 'catalogo:lista' %}">Ferretería</a>
+    <nav>
+      <a href="{% url 'catalogo:lista' %}">Catálogo</a>
+      <a href="{% url 'admin:index' %}">Administración</a>
+    </nav>
+  </header>
+  <main class="contenido">
+    {% block contenido %}{% endblock %}
+  </main>
+  <footer class="pie">Aplicación web en Django · datos en Oracle (contenedor oracle-db, red soc-net)</footer>
+</body>
+</html>

@@ -1,0 +1,8 @@
+"""Punto de entrada WSGI que usa gunicorn para servir la aplicación."""
+import os
+
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ferreteria.settings")
+
+application = get_wsgi_application()

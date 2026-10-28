@@ -1,0 +1,27 @@
+Spider iniciado, id 0
+07:41:46 spider: 66%
+07:41:56 spider: True
+URLs encontradas por el spider: 16
+   http://172.28.0.20:8000/static/admin/css/login.a3b47c458e5d.css
+   http://172.28.0.20:8000/static/catalogo/estilos.55900e241f89.css
+   http://172.28.0.20:8000/robots.txt
+   http://172.28.0.20:8000/sitemap.xml
+   http://172.28.0.20:8000/static/admin/css/responsive.80b7f3c4f68f.css
+   http://172.28.0.20:8000/static/admin/js/nav_sidebar.3b9190d420b1.js
+   http://172.28.0.20:8000/static/admin/css/dark_mode.1215cee25eaa.css
+   http://172.28.0.20:8000/static/admin/css/nav_sidebar.dd925738f4cc.css
+   http://172.28.0.20:8000/?q
+   http://172.28.0.20:8000/producto/P001/
+   http://172.28.0.20:8000/static/admin/css/base.96c479cedf7a.css
+   http://172.28.0.20:8000/
+   http://172.28.0.20:8000/producto/P002/
+   http://172.28.0.20:8000/admin/login/?next=/admin/
+   http://172.28.0.20:8000/static/admin/js/theme.91cf832f559e.js
+   http://172.28.0.20:8000/admin/
+07:41:57 pasivo: True
+Resumen de alertas (instancias): {'High': 0, 'Low': 2, 'Medium': 9, 'Informational': 11}
+  [Medium] CSP: style-src unsafe-inline (regla 10055): 9 instancias
+  [Low] Cookie No HttpOnly Flag (regla 10010): 2 instancias
+  [Informational] Authentication Request Identified (regla 10111): 1 instancias
+  [Informational] Session Management Response Identified (regla 10112): 2 instancias
+  [Informational] User Controllable HTML Element Attribute (Potential XSS) (regla 10031): 8 instancias

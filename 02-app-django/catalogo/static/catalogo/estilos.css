@@ -1,0 +1,20 @@
+:root { --azul: #1f4e79; --gris: #f3f5f8; --borde: #d6dce4; --texto: #1d2733; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; color: var(--texto); background: #fff; }
+.barra { display: flex; justify-content: space-between; align-items: center; padding: 14px 32px; background: var(--azul); }
+.barra a { color: #fff; text-decoration: none; margin-left: 20px; }
+.barra .marca { font-size: 1.3rem; font-weight: 600; margin-left: 0; }
+.contenido { max-width: 1000px; margin: 32px auto; padding: 0 24px; }
+h1 { font-size: 1.6rem; margin-bottom: 18px; }
+.buscador { display: flex; gap: 10px; align-items: center; margin-bottom: 18px; }
+.buscador input { padding: 8px 10px; border: 1px solid var(--borde); border-radius: 4px; min-width: 260px; }
+.buscador button { padding: 8px 16px; border: 0; border-radius: 4px; background: var(--azul); color: #fff; cursor: pointer; }
+.nota { color: #555; }
+.tabla { width: 100%; border-collapse: collapse; }
+.tabla th, .tabla td { padding: 10px 12px; border-bottom: 1px solid var(--borde); text-align: left; }
+.tabla thead th { background: var(--gris); }
+.tabla .num { text-align: right; }
+.vacio { text-align: center; color: #777; }
+.ficha { display: grid; grid-template-columns: 140px 1fr; gap: 8px 16px; }
+.ficha dt { font-weight: 600; }
+.pie { text-align: center; color: #777; font-size: .85rem; margin: 40px 0 24px; }

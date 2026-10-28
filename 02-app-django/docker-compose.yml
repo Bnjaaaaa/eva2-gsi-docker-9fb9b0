@@ -1,0 +1,19 @@
+# Aplicación web Ferretería (Django) — imagen propia construida con el Dockerfile de esta carpeta.
+# Requisitos: red soc-net creada, Oracle levantado (01-oracle) e imagen construida con:
+#   docker build -t ferreteria-web:1.1 .
+# Levantar desde esta carpeta:  docker compose up -d     → http://localhost:8088
+services:
+  app-web:
+    image: ferreteria-web:1.1           # imagen local (no existe en Docker Hub); 1.1 = mitigaciones
+    container_name: app-web
+    restart: unless-stopped
+    ports:
+      - "8088:8000"                     # host:contenedor (gunicorn escucha en 8000)
+    env_file: .env                      # secretos y conexión a Oracle fuera del compose
+    networks:
+      soc-net:
+        ipv4_address: 172.28.0.20       # IP fija: objetivo estable para ZAP y OpenVAS
+
+networks:
+  soc-net:
+    external: true

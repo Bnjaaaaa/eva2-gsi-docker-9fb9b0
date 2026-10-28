@@ -1,0 +1,44 @@
+Escaneo activo iniciado, id 0
+07:17:26 activo: 0%
+07:17:36 activo: 8%
+07:17:46 activo: 35%
+07:17:56 activo: 35%
+07:18:06 activo: 35%
+07:18:16 activo: 35%
+07:18:26 activo: 35%
+07:18:36 activo: 35%
+07:18:46 activo: 35%
+07:18:56 activo: 35%
+07:19:07 activo: 35%
+07:19:17 activo: 35%
+07:19:27 activo: 35%
+07:19:37 activo: 35%
+07:19:47 activo: 35%
+07:19:57 activo: 35%
+07:20:07 activo: 35%
+07:20:17 activo: 35%
+07:20:27 activo: 35%
+07:20:37 activo: 35%
+07:20:47 activo: 35%
+07:20:57 activo: 35%
+07:21:07 activo: 35%
+07:21:17 activo: 35%
+07:21:27 activo: 35%
+07:21:38 activo: 35%
+07:21:48 activo: 35%
+07:21:58 activo: 35%
+07:22:08 activo: 35%
+07:22:18 activo: 63%
+07:22:28 activo: 63%
+07:22:38 activo: 94%
+07:22:48 activo: True
+07:22:48 pasivo: True
+Resumen de alertas (instancias): {'High': 0, 'Low': 2, 'Medium': 17, 'Informational': 96}
+  [Medium] Content Security Policy (CSP) Header Not Set (regla 10038): 8 instancias
+  [Medium] Cross-Domain Misconfiguration (regla 10098): 8 instancias
+  [Medium] HTTP Only Site (regla 10106): 1 instancias
+  [Low] Cookie No HttpOnly Flag (regla 10010): 2 instancias
+  [Informational] Authentication Request Identified (regla 10111): 1 instancias
+  [Informational] Session Management Response Identified (regla 10112): 3 instancias
+  [Informational] User Agent Fuzzer (regla 10104): 84 instancias
+  [Informational] User Controllable HTML Element Attribute (Potential XSS) (regla 10031): 8 instancias

@@ -1,0 +1,8 @@
+# Archivos que NO deben entrar a la imagen
+.env
+.env.*
+docker-compose.yml
+__pycache__/
+*.pyc
+staticfiles/
+.git

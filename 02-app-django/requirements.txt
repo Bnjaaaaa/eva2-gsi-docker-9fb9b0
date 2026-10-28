@@ -1,0 +1,4 @@
+Django==5.2.18
+oracledb==4.0.2
+gunicorn==26.2.0
+whitenoise==6.12.0

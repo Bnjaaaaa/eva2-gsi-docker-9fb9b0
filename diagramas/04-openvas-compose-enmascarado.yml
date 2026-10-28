@@ -1,0 +1,27 @@
+# OpenVAS (Greenbone Community Edition) — escáner de vulnerabilidades de infraestructura.
+# Imagen todo-en-uno de immauss: incluye el escáner, el gestor (gvmd) y la interfaz web (GSA).
+# Interfaz: http://localhost:9392  (usuario: admin, contraseña: la definida en .env)
+# Levantar desde esta carpeta:  docker compose up -d
+services:
+  openvas:
+    image: immauss/openvas:latest
+    container_name: openvas
+    restart: unless-stopped
+    ports:
+      - "9392:9392"                     # interfaz web GSA
+    environment:
+      PASSWORD: "[oculto]"     # contraseña del usuario admin, leída desde el archivo .env
+      # La descarga de feeds desde el servidor público de Greenbone (rsync) se cortaba y el
+      # contenedor se reiniciaba en bucle. Se omite y se usan los feeds incluidos en la imagen.
+      SKIPSYNC: "true"
+    volumes:
+      - openvas-data:/data              # persiste la base de datos, los feeds y los resultados
+    networks:
+      - soc-net
+
+volumes:
+  openvas-data:
+
+networks:
+  soc-net:
+    external: true                      # la red se creó antes con: docker network create --subnet 172.28.0.0/16 soc-net

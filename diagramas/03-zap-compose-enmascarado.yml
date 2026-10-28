@@ -1,0 +1,29 @@
+# ZAP (Zed Attack Proxy) 2.17 — escáner de vulnerabilidades de aplicaciones web.
+# Se usa con su interfaz gráfica completa desde el navegador (Webswing), sin instalar nada en el equipo.
+# Interfaz: http://localhost:8080/zap/   ·   Proxy/API: localhost:8090 (API protegida con clave, ver .env)
+# Levantar desde esta carpeta:  docker compose up -d
+services:
+  zap:
+    image: zaproxy/zap-stable:latest
+    container_name: zap
+    restart: unless-stopped
+    user: zap                           # usuario sin privilegios de la imagen oficial
+    command: zap-webswing.sh            # inicia ZAP con interfaz web en lugar de escritorio
+    ports:
+      - "8080:8080"                     # interfaz web (Webswing)
+      - "8090:8090"                     # proxy y API de ZAP
+    environment:
+      # Opciones de arranque de ZAP: escuchar en todas las interfaces del contenedor, sesión nueva
+      # (evita el diálogo de persistencia) y API con clave, aceptando clientes de la red Docker.
+      ZAP_WEBSWING_OPTS: >-
+        -host 0.0.0.0 -port 8090 -newsession /home/zap/sesion-eva2
+        -config api.key=[oculto]
+        -config api.addrs.addr.name=.* -config api.addrs.addr.regex=true
+    volumes:
+      - ../reportes/zap:/zap/wrk        # los reportes que genera ZAP quedan en la carpeta reportes/zap
+    networks:
+      - soc-net
+
+networks:
+  soc-net:
+    external: true

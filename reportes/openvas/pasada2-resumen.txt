@@ -1,0 +1,15 @@
+Inicio: 2026-10-27T10:31:00Z | Fin: 2026-10-27T10:36:44Z
+Puertos: [None, None, None, None]
+  [Low 2.6] TCP Timestamps Information Disclosure | puerto general/tcp | NVT 1.3.6.1.4.1.25623.1.0.80091
+  [Low 2.1] ICMP Timestamp Reply Information Disclosure | puerto general/icmp | NVT 1.3.6.1.4.1.25623.1.0.103190
+  [Log 0.0] OS Detection Consolidation and Reporting | puerto general/tcp | NVT 1.3.6.1.4.1.25623.1.0.105937
+  [Log 0.0] IP Forwarding Enabled - Active Check | puerto general/tcp | NVT 1.3.6.1.4.1.25623.1.0.147205
+  [Log 0.0] Traceroute | puerto general/tcp | NVT 1.3.6.1.4.1.25623.1.0.51662
+  [Log 0.0] HTTP Server Banner Enumeration | puerto 8000/tcp | NVT 1.3.6.1.4.1.25623.1.0.108708
+  [Log 0.0] HTTP Server type and version | puerto 8000/tcp | NVT 1.3.6.1.4.1.25623.1.0.10107
+  [Log 0.0] HTTP Security Headers Detection | puerto 8000/tcp | NVT 1.3.6.1.4.1.25623.1.0.112081
+  [Log 0.0] Web Application Scanning Consolidation / Info Reporting | puerto 8000/tcp | NVT 1.3.6.1.4.1.25623.1.0.111038
+  [Log 0.0] CPE Inventory | puerto general/CPE-T | NVT 1.3.6.1.4.1.25623.1.0.810002
+  [Log 0.0] Services | puerto 8000/tcp | NVT 1.3.6.1.4.1.25623.1.0.10330
+  [Log 0.0] Hostname Determination Reporting | puerto general/tcp | NVT 1.3.6.1.4.1.25623.1.0.108449
+  [Log 0.0] Gunicorn Detection (HTTP) | puerto 8000/tcp | NVT 1.3.6.1.4.1.25623.1.0.149043

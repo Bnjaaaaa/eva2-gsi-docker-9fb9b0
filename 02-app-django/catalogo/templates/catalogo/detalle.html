@@ -1,0 +1,12 @@
+{% extends "catalogo/base.html" %}
+{% block titulo %}{{ producto.nombre }}{% endblock %}
+{% block contenido %}
+<p><a href="{% url 'catalogo:lista' %}">← Volver al catálogo</a></p>
+<h1>{{ producto.nombre }}</h1>
+<dl class="ficha">
+  <dt>Código</dt><dd>{{ producto.codigo }}</dd>
+  <dt>Categoría</dt><dd>{{ producto.categoria.nombre }}</dd>
+  <dt>Precio</dt><dd>$ {{ producto.precio|floatformat:0 }}</dd>
+  <dt>Stock</dt><dd>{{ producto.stock }} ({{ producto.unidad }})</dd>
+</dl>
+{% endblock %}

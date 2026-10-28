@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  oracle-db:
+    image: gvenzl/oracle-free:latest
+    container_name: oracle-db
+    restart: unless-stopped
+    ports:
+      - "1521:1521"
+    networks: [soc-net]
+    environment:
+      ORACLE_PASSWORD: MyPass123       # SYS y SYSTEM
+      APP_USER: usuario                # usuario de aplicación
+      APP_USER_PASSWORD: MyPass123 # contraseña del usuario
+      ORACLE_DATABASE: FREEPDB1        # PDB a la que se conecta APP_USER
+    volumes:
+      - oracle-volume:/opt/oracle/oradata
+volumes:
+  oracle-volume:
+    driver: local
+networks:
+  soc-net:
+    external: true

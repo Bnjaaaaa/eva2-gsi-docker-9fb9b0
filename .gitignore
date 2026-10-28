@@ -1,0 +1,30 @@
+# Lista de permitidos: se ignora todo y solo se incluye lo necesario para replicar el proyecto.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/Dockerfile.md
+!/DEMO.md
+!/01-oracle/
+!/02-app-django/
+!/03-zap/
+!/04-openvas/
+!/informe/
+!/reportes/
+!/capturas/
+!/diagramas/
+
+# Herramientas: solo los scripts y recursos (sin entorno virtual, perfiles de navegador ni temporales)
+!/_herramientas/
+/_herramientas/*
+!/_herramientas/*.py
+!/_herramientas/*.ps1
+!/_herramientas/recursos/
+
+# Nunca subir secretos ni archivos generados
+.env
+__pycache__/
+*.pyc
+staticfiles/
+~$*
+.DS_Store

@@ -1,0 +1,31 @@
+{% extends "catalogo/base.html" %}
+{% block titulo %}Catálogo{% endblock %}
+{% block contenido %}
+<h1>Catálogo de productos</h1>
+<form class="buscador" method="get" action="{% url 'catalogo:lista' %}">
+  <label for="q">Buscar por nombre</label>
+  <input id="q" name="q" type="search" value="{{ q }}" placeholder="Ej.: martillo">
+  <button type="submit">Buscar</button>
+  {% if q %}<a href="{% url 'catalogo:lista' %}">Limpiar</a>{% endif %}
+</form>
+{% if q %}<p class="nota">Resultados para «{{ q }}»: {{ productos|length }}</p>{% endif %}
+<table class="tabla">
+  <thead>
+    <tr><th>Código</th><th>Nombre</th><th>Categoría</th><th class="num">Precio</th><th class="num">Stock</th><th>Unidad</th></tr>
+  </thead>
+  <tbody>
+    {% for p in productos %}
+    <tr>
+      <td><a href="{% url 'catalogo:detalle' p.codigo %}">{{ p.codigo }}</a></td>
+      <td>{{ p.nombre }}</td>
+      <td>{{ p.categoria.nombre }}</td>
+      <td class="num">$ {{ p.precio|floatformat:0 }}</td>
+      <td class="num">{{ p.stock }}</td>
+      <td>{{ p.unidad }}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="6" class="vacio">No hay productos que coincidan con la búsqueda.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
